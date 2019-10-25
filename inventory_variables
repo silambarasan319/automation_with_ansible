@@ -1,0 +1,15 @@
+[chennai]
+servera user_name=admin3 state=present 
+serverb  
+
+[mumbai]
+serverc
+serverd
+
+[rhel:children]
+chennai
+mumbai
+
+[chennai:vars]
+user_name=admin4
+state=present
