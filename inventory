@@ -1,0 +1,11 @@
+[chennai]
+servera 
+serverb  
+
+[mumbai]
+serverc
+serverd
+
+[rhel:children]
+chennai
+mumbai
