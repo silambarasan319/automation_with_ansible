@@ -1,0 +1,191 @@
+    1  cd /sansbound/
+    2  vim linux_automation/nfs_client.yml
+    3  ansible serverb -m command -a "df -h"
+    4  ansible serverb -m command -a "cat /etc/fstab"
+    5  ansible-playbook linux_automation/nfs_client.yml 
+    6  ansible serverb -m command -a "cat /etc/fstab"
+    7  ansible serverb -m command -a "df -h"
+    8  vim linux_automation/nfs_client.yml
+    9  ls linux_automation/
+   10  vim linux_automation/nfs_client.yml 
+   11  ansible-playbook linux_automation/nfs_client.yml 
+   12  vim linux_automation/nfs_client.yml 
+   13  ansible-playbook linux_automation/nfs_client.yml 
+   14  ssh root@serverc
+   15  ssh root@serverd
+   16  ls linux_automation/
+   17  cd /sansbound/
+   18  vim ansible.cfg
+   19  vim inventory
+   20  mkdir linux_automation
+   21  vim linux_automation/create_user.yml
+   22  vim ~/.vimrc
+   23  cp ~/.vimrc indentation
+   24  ls
+   25  vim linux_automation/implement_apache.yml
+   26  ls
+   27  cp linux_automation/create_user.yml linux_automation/delete_user.yml
+   28  ls linux_automation/
+   29  vim linux_automation/delete_user.yml 
+   30  ansible all -m ping
+   31  ls
+   32  cat ansible.cfg 
+   33  cat indentation 
+   34  cat inventory 
+   35  ls
+   36  ls linux_automation/
+   37  vim linux_automation/create_user.yml 
+   38  vim linux_automation/delete_user.yml 
+   39  ls
+   40  vim linux_automation/implement_apache.yml 
+   41  ls
+   42  vim linux_automation/create_user.yml 
+   43  vim linux_automation/delete_user.yml 
+   44  vim linux_automation/implement_apache.yml 
+   45  ls linux_automation/
+   46  vim linux_automation/implement_apache.yml 
+   47  ansible-playbook linux_automation/implement_apache.yml 
+   48  vim linux_automation/implement_nfs_server.yml
+   49  ansible all -m command -a "ip a"
+   50  vim linux_automation/implement_nfs_server.yml
+   51  ansible-playbook --syntax-check linux_automation/implement_nfs_server.yml 
+   52  ansible-playbook linux_automation/implement_nfs_server.yml 
+   53  vim linux_automation/implement_nfs_server.yml
+   54  vim linux_automation/nfs_client.yml 
+   55  cp linux_automation/create_user.yml linux_automation/simple_variable.yml
+   56  vim linux_automation/simple_variable.yml
+   57  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   58  vim linux_automation/simple_variable.yml
+   59  ansible-playbook linux_automation/simple_variable.yml 
+   60  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   61  vim linux_automation/simple_variable.yml
+   62  ansible-playbook linux_automation/simple_variable.yml 
+   63  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   64  vim linux_automation/simple_variable.yml
+   65  ls linux_automation/
+   66  cp linux_automation/variable_in_external_file.yml linux_automation/inventory_variable.yml
+   67  vim linux_automation/inventory_variable.yml 
+   68  vim inventory 
+   69  cat linux_automation/inventory_variable.yml 
+   70  cat inventory 
+   71  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   72  vim inventory 
+   73  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   74  ansible-playbook linux_automation/inventory_variable.yml 
+   75  cat linux_automation/inventory_variable.yml 
+   76  vim inventory 
+   77  mkdir host_vars
+   78  mkdir group_vars
+   79  vim group_vars/chennai
+   80  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   81  vim group_vars/chennai
+   82  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   83  cat linux_automation/inventory_variable.yml 
+   84  cat group_vars/chennai 
+   85  ansible-playbook linux_automation/inventory_variable.yml 
+   86  cat linux_automation/inventory_variable.yml 
+   87  vim group_vars/chennai 
+   88  ansible-playbook linux_automation/simple_variable.yml -e user_name=u
+   89  cat linux_automation/simple_variable.yml 
+   90  ls
+   91  exit
+   92  cd /sansbound/
+   93  echo redhat | openssl passwd -1 -stdin
+   94  vim linux_automation/simple_variable.yml 
+   95  ansible-playbook linux_automation/simple_variable.yml 
+   96  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+   97  ssh root@servera
+   98  vim linux_automation/simple_variable.yml 
+   99  ansible-playbook linux_automation/simple_variable.yml 
+  100  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+  101  vim linux_automation/simple_variable.yml 
+  102  ansible-playbook linux_automation/simple_variable.yml 
+  103  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+  104  vim linux_automation/simple_variable.yml 
+  105  cat linux_automation/simple_variable.yml 
+  106  vim linux_automation/simple_variable.yml 
+  107  cp linux_automation/simple_variable.yml linux_automation/variable_in_external_file.yml
+  108  vim linux_automation/variable_in_external_file.yml
+  109  cp linux_automation/variable_in_external_file.yml variables.yml
+  110  vim variables.yml 
+  111  rm -rf variables.yml 
+  112  cp linux_automation/simple_variable.yml variables.yml
+  113  vim variables.yml 
+  114  cat linux_automation/variable_in_external_file.yml 
+  115  cat variables.yml 
+  116  vim variables.yml 
+  117  ansible-playbook linux_automation/variable_in_external_file.yml 
+  118  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+  119  ls
+  120  vim ansible.cfg 
+  121  vim group_vars/chennai 
+  122  ls
+  123  cd /sansbound/
+  124  ls
+  125  vim linux_automation/simple_variable.yml 
+  126  ansible-playbook linux_automation/simple_variable.yml 
+  127  vim linux_automation/simple_variable.yml 
+  128  cd /sansbound/
+  129  ls
+  130  rm -rf host_vars/*
+  131  rm -rf group_vars/*
+  132  vim inventory 
+  133  ls
+  134  cat ansible.cfg 
+  135  cat inventory 
+  136  l
+  137  ls
+  138  cat indentation 
+  139  ls
+  140  ls linux_automation/
+  141  vim linux_automation/create_user.yml 
+  142  vim linux_automation/delete_user.yml 
+  143  vim linux_automation/implement_apache.yml 
+  144  vim linux_automation/create_user.yml 
+  145  vim linux_automation/delete_user.yml 
+  146  vim linux_automation/implement_apache.yml 
+  147  vim linux_automation/implement_nfs_server.yml 
+  148  vim linux_automation/nfs_client.yml 
+  149  ls
+  150  ls linux_automation/
+  151  ls
+  152  vim linux_automation/simple_variable.yml 
+  153  ansible-playbook linux_automation/simple_variable.yml 
+  154  vim linux_automation/simple_variable.yml 
+  155  ansible-playbook linux_automation/simple_variable.yml 
+  156  vim linux_automation/simple_variable.yml 
+  157  ls linux_automation/
+  158  vim linux_automation/simple_variable.yml 
+  159  ansible-playbook linux_automation/simple_variable.yml 
+  160  ls linux_automation/
+  161  vim linux_automation/variable_in_external_file.yml 
+  162  vim variables.yml 
+  163  ansible-playbook linux_automation/variable_in_external_file.yml 
+  164  vim linux_automation/variable_in_external_file.yml 
+  165  ls linux_automation/
+  166  vim linux_automation/inventory_variable.yml 
+  167  ansible-playbook linux_automation/inventory_variable.yml 
+  168  ls
+  169  vim inventory 
+  170  ansible-playbook linux_automation/inventory_variable.yml 
+  171  vim inventory 
+  172  ansible-playbook linux_automation/inventory_variable.yml 
+  173  vim inventory 
+  174  ansible chennai -m shell -a "grep sh$ /etc/passwd"
+  175  vim inventory 
+  176  ansible-playbook linux_automation/inventory_variable.yml 
+  177  vim inventory 
+  178  ansible-playbook linux_automation/inventory_variable.yml 
+  179  ls
+  180  vim inventory 
+  181  cp inventory inventory_variables
+  182  ls
+  183  vim inventory
+  184  vim linux_automation/simple_variable.yml 
+  185  vim linux_automation/variable_in_external_file.yml 
+  186  vim variables.yml 
+  187  vim linux_automation/inventory_variable.yml 
+  188  vim inventory_variables 
+  189  ls
+  190  history 
+  191  history > day4_commands

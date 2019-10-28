@@ -1,0 +1,75 @@
+    1  cd /sansbound/
+    2  ls
+    3  ls linux_automation/
+    4  ansible -m ping all
+    5  cat linux_automation/04implement_nfs_server.yml 
+    6  cp linux_automation/04implement_nfs_server.yml linux_automation/09registered_variable.yml
+    7  ansible-playbook linux_automation/09registered_variable.yml 
+    8  cp linux_automation/03implement_apache.yml linux_automation/09registered_variable.yml 
+    9  vim linux_automation/09registered_variable.yml 
+   10  ansible-playbook linux_automation/09registered_variable.yml 
+   11  ls
+   12  ls linux_automation/
+   13  ansible-vault encrypt linux_automation/01create_user.yml 
+   14  cat linux_automation/01create_user.yml 
+   15  cat linux_automation/02delete_user.yml 
+   16  ansible-playbook linux_automation/01create_user.yml 
+   17  ansible-vault view linux_automation/01create_user.yml 
+   18  ansible-vault edit linux_automation/01create_user.yml 
+   19  ansible-vault rekey linux_automation/01create_user.yml 
+   20  ansible-vault decrypt linux_automation/01create_user.yml 
+   21  cat indentation 
+   22  vim ~/.vimrc
+   23  ls
+   24  ansible-vault create linux_automation/10_playbook.yml
+   25  vim .file
+   26  ansible-vault rekey --new-vault-password-file=.file linux_automation/10_playbook.yml 
+   27  cat linux_automation/01create_user.yml 
+   28  ansible-vault encrypt linux_automation/01create_user.yml 
+   29  cat linux_automation/01create_user.yml 
+   30  ansible-playbook linux_automation/01create_user.yml 
+   31  ansible-playbook linux_automation/01create_user.yml --ask-vault-pass
+   32  ansible-vault edit linux_automation/01create_user.yml 
+   33  ansible-playbook linux_automation/01create_user.yml --ask-vault-pass
+   34  ansible-vault edit linux_automation/01create_user.yml 
+   35  ansible-playbook linux_automation/01create_user.yml --ask-vault-pass
+   36  ls linux_automation/
+   37  rm -rf linux_automation/10_playbook.yml 
+   38  ansible-vault decrypt linux_automation/01create_user.yml 
+   39  ls linux_automation/
+   40  ansible servera -m setup
+   41  ansible-playbook linux_automation/01create_user.yml 
+   42  ansible servera -m setup -a filter=ansible_distribution
+   43  ansible all -m setup -a filter=ansible_python_version
+   44  vim linux_automation/10gathering_facts.yml
+   45  ansible-playbook linux_automation/10gathering_facts.yml 
+   46  ansible-playbook linux_automation/09registered_variable.yml 
+   47  vim linux_automation/09registered_variable.yml 
+   48  ansible-playbook linux_automation/09registered_variable.yml 
+   49  ansible all -m command -a "ls /etc/ansible/facts.d"
+   50  ansible all -m file -a "path=/etc/ansible/facts.d state=directory recurse=yes"
+   51  vim local.fact
+   52  ansible servera,serverc -m copy -a "src=local.fact dest=/etc/ansible/facts.d"
+   53  ansible all -m setup -a filter=ansible_local
+   54  ansible all -m setup -a filter=ansible_local.local.sansbound.admin
+   55  ls
+   56  ls linux_automation/
+   57  cp linux_automation/01create_user.yml linux_automation/11loop.yml
+   58  vim linux_automation/11loop.yml
+   59  mv linux_automation/11loop.yml linux_automation/11simple_loop.yml
+   60  cat linux_automation/11simple_loop.yml
+   61  ansible-playbook linux_automation/11simple_loop.yml 
+   62  vim linux_automation/11simple_loop.yml
+   63  vim users.yml
+   64  cat linux_automation/11simple_loop.yml 
+   65  ansible-playbook --syntax-check linux_automation/11simple_loop.yml 
+   66  vim linux_automation/11simple_loop.yml
+   67  ansible-playbook --syntax-check linux_automation/11simple_loop.yml 
+   68  vim linux_automation/11simple_loop.yml
+   69  ansible-playbook --syntax-check linux_automation/11simple_loop.yml 
+   70  ansible-playbook linux_automation/11simple_loop.yml 
+   71  ls
+   72  cd /sansbound/
+   73  ls
+   74  vim ansible.cfg 
+   75  history > commands/day5_commands 
