@@ -1,0 +1,6 @@
+---
+ - name: implement apache
+   import_playbook: /sansbound/implementations/implement_apache.yml
+
+ - name: implement nfs
+   import_playbook: /sansbound/implementations/implement_nfs.yml
