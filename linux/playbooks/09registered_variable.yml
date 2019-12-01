@@ -10,5 +10,5 @@
       register: install_output
 
     - debug: var=install_output
-
+...
 

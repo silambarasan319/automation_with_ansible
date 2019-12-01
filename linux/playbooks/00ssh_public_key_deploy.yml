@@ -1,6 +1,6 @@
 ---
  - name: Public key is deployed and sudoer config for managed hosts
-   hosts: linux
+   hosts: chennai
    vars:
     user: admin
    tasks:
@@ -17,3 +17,4 @@
       copy:
         content: "admin ALL=(ALL) NOPASSWD:ALL"
         dest: /etc/sudoers.d/admin
+...

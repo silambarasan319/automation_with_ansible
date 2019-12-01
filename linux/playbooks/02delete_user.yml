@@ -5,6 +5,6 @@
 
     - name: Delete user
       user:
-        name: admin
+        name: devops
         state: absent
 ...

@@ -5,6 +5,6 @@
 
     - name: Create user
       user:
-        name: admin
+        name: devops
         state: present
 ...
