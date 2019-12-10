@@ -1,6 +1,6 @@
 ---
  - name: Creating list of users in chennai datacenter
-   hosts:chennai
+   hosts: chennai
    vars_files:
     - variables/users.yml
    tasks:
